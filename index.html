@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capacitación docente · Escuela Las Américas</title>
+<meta name="description" content="Capacitación para docentes: qué hacer ante inundaciones, incendios, sismos, primeros auxilios y manejo del grupo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" id="fav" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <button class="brand" data-go="inicio" aria-label="Ir al inicio">
+    <img class="logo" data-logo alt="Escudo de la Escuela Primaria Urbana Las Américas">
+    <span class="brand-t">Capacitación docente<small>Escuela Primaria Urbana N.º 42 «Las Américas»</small></span>
+  </button>
+  <nav id="nav" aria-label="Menú principal">
+    <button data-go="inicio">🏠 Inicio</button>
+    <button data-go="inundacion">🌧️ Inundación</button>
+    <button data-go="incendio">🔥 Incendio y extintor</button>
+    <button data-go="sismo">🌎 Sismo</button>
+    <button data-go="auxilios">🩹 Primeros auxilios</button>
+    <button data-go="grupo">👩‍🏫 Manejo del grupo</button>
+    <button data-go="mapa">🗺️ Mapa</button>
+    <button data-go="respuesta">📋 Si se inunda</button>
+    <a class="ext btn ghost" id="navNinos" href="../ninos/index.html" style="border-color:var(--acc);padding:6px 14px;text-decoration:none">🦉 Sitio para niños</a>
+  </nav>
+</header>
+
+<main id="contenido">
+
+  <section id="inicio" class="screen">
+    <div class="hero">
+      <img class="hero-logo" data-logo alt="Escudo de la Escuela Primaria Urbana Las Américas">
+      <div>
+        <p class="kicker">Escuela Primaria Urbana N.º 42 «Las Américas» · Irapuato, Gto.</p>
+        <h1>Capacitación para docentes en seguridad escolar</h1>
+        <p class="lead">Información práctica para actuar y conducir a sus alumnos ante inundaciones, incendios y sismos, con técnicas de extintor, primeros auxilios y prevención de accidentes en la escuela.</p>
+        <div class="cta"><button class="btn w" data-go="inundacion">Comenzar con inundación</button><button class="btn w" data-go="mapa">Ver el mapa de riesgos</button></div>
+      </div>
+    </div>
+    <h2 class="sec">Temas de capacitación</h2>
+    <p class="sub">Cada tema se organiza en tres momentos: antes (prevención), durante (cómo actuar) y después (retorno y seguimiento).</p>
+    <div class="grid" id="temaTiles"></div>
+    <div class="link-card">
+      <span class="em">🦉</span>
+      <div style="flex:1;min-width:230px"><h3>Sitio del Capitán Sipi para niños</h3><p>Conozca la herramienta que usan sus alumnos: juegos, señales y mapa. Puede usarla en clase como apoyo para reforzar lo aprendido.</p></div>
+      <a class="btn" id="linkNinos" href="../ninos/index.html">Abrir sitio para niños →</a>
+    </div>
+  </section>
+
+  <section id="inundacion" class="screen"><h2 class="sec">🌧️ Inundación</h2><div class="temaBody"></div></section>
+  <section id="incendio" class="screen"><h2 class="sec">🔥 Incendio y uso del extintor</h2><div class="temaBody"></div></section>
+  <section id="sismo" class="screen"><h2 class="sec">🌎 Sismo</h2><div class="temaBody"></div></section>
+
+  <section id="auxilios" class="screen">
+    <h2 class="sec">🩹 Primeros auxilios para docentes</h2>
+    <div id="auxBody"></div>
+  </section>
+
+  <section id="grupo" class="screen">
+    <h2 class="sec">👩‍🏫 Cómo manejar al grupo en una emergencia</h2>
+    <p class="sub">La conducción del docente es el factor que más influye en la seguridad y la calma de los alumnos.</p>
+    <div id="grupoBody"></div>
+  </section>
+
+  <section id="mapa" class="screen">
+    <h2 class="sec">🗺️ Mapa de riesgos: qué debe hacer el docente</h2>
+    <p class="sub">Seleccione cada punto para ver el riesgo y las acciones de prevención que le corresponden.</p>
+    <div class="map-wrap">
+      <div class="card map-card" id="mapSvgBox"></div>
+      <div class="card info-card" id="mapInfo" aria-live="polite"></div>
+    </div>
+    <div class="legend" id="mapLegend"></div>
+  </section>
+
+  <section id="respuesta" class="screen">
+    <h2 class="sec">📋 ¿Qué hacemos si se inunda la escuela?</h2>
+    <p class="sub">Así responde la escuela cuando las coladeras regresan el agua. En cada paso se indica cuál es su papel.</p>
+    <div id="stepper"></div>
+    <h2 class="sec">¿Quién hace qué?</h2>
+    <div id="roles" class="roles"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Proyecto del Equipo 4 · Ingeniería de Sistemas · ITESI. Material de capacitación y consulta: no sustituye los protocolos oficiales de Protección Civil ni la capacitación certificada.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
